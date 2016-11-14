@@ -62,8 +62,10 @@ namespace tiendat.Controllers
                             System.IO.Directory.CreateDirectory(Server.MapPath(pathFile));
                         }
                         Photo.SaveAs(path);
-                        pro.DateFrom = DateTime.Parse(String.Format('{0:dd/MM/yyyy}', ));
-                        pro.DateTo = DateTime.Parse(Convert.ToString(pro.DateTo));
+                        var datefrom = String.Format("{0:dd/MM/yyyy}", cl["DateFrom"]);
+                        var dateto = String.Format("{0:dd/MM/yyyy}", cl["DateTo"]);
+                        pro.DateFrom = DateTime.Parse(datefrom);
+                        pro.DateTo = DateTime.Parse(dateto);
                         pro.IsNew = true;
                         db.Products.Add(pro);
                         db.SaveChanges();

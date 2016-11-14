@@ -99,8 +99,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.BrandID, new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.BrandID)
-                    @Html.ValidationMessageFor(model => model.BrandID)
+                    @Html.DropDownList("danhmuc")
                 </div>
             </div>
     
