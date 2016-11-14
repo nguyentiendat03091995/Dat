@@ -51,7 +51,7 @@ namespace tiendat.Controllers
 
                         var guid = Guid.NewGuid().ToString();
                         //var nam = DateTime.Now.Year;
-                        //var thang = DateTime.Now.Month;
+                        //var thang = DateTime.Now.Month;fhsàhdskahfkdsa
                         //var ngay = DateTime.Now.Day;
                         var pathFile = "/files/" + guid + "/images/";
                         var fileName = Path.GetFileName(Photo.FileName);
