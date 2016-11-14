@@ -1,0 +1,84 @@
+﻿@model IEnumerable<tiendat.Models.Brand>
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Themsp</title>
+</head>
+<body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    
+    @using (Html.BeginForm()) 
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h2>SẢN PHẨM</h2>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div>
+            <p>Tên sản phẩm <i style="color: red">*</i></p>
+            <input type="text" name="tensp" placeholder="Tên sản phẩm" />
+        </div>
+
+        <div>
+            <p>Ảnh(550 x 340)</p>
+            <input type="file" name="upfile" />
+            <input type="submit" name="delete" />
+        </div>
+
+        <div class="c">
+            <div>
+                <p>Danh mục <i style="color: red">*</i></p>
+                <input type="text" name="danhmuc" />
+            </div>
+
+            <div>
+                <p>Tình trạng</p>
+                <input type="text" name="tt" />
+            </div>
+        </div>
+
+        <div class="c">
+            <p>Giá bán</p>
+            <input type="text" name="gia" placeholder="Giá bán" />
+        </div>
+
+        <div class="c">
+            <div class="c-a">
+                <p>Từ ngày</p>
+                <input type="date" name="tungay" />
+            </div>
+
+            <div class="c-a">
+                <p>Đến ngày</p>
+                <input type="date" name="denngay" />
+            </div>
+
+            <div class="c-a">
+                <p>Giá khuyến mãi</p>
+                <input type="text" name="giakm" placeholder="Giá khuyến mãi" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+
+        </div>
+    }
+    <script>
+        
+    </script>
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>

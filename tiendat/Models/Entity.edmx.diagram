@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="62ffaab3850c46ff8291dd6e4add580a" Name="Diagram1">
+        <EntityTypeShape EntityType="ibebizModel.Account" Width="1.5" PointX="13" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.Brand" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.Category" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.CategoryL" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.CategoryProperty" Width="1.5" PointX="7.5" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.Comment" Width="1.5" PointX="9.75" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.FCategory" Width="1.5" PointX="8.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.FCategoryL" Width="1.5" PointX="11" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.Group" Width="1.5" PointX="10.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.News" Width="1.5" PointX="3" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.NewsL" Width="1.5" PointX="5.25" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.OrderDetail" Width="1.5" PointX="8.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.Order" Width="1.5" PointX="6" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.Permission" Width="1.5" PointX="16" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.Picture" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.Post" Width="1.5" PointX="13.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.PriceChart" Width="1.5" PointX="5.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.ProductDetail" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.ProductL" Width="1.5" PointX="5.25" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.ProductProperty" Width="1.5" PointX="7.5" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.Product" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.Property" Width="1.5" PointX="5.25" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.PropertyDetail" Width="1.5" PointX="7.5" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.Script" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.Size" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.SliderL" Width="1.5" PointX="14" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.Slider" Width="1.5" PointX="11.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.sysdiagram" Width="1.5" PointX="2.75" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ibebizModel.Table" Width="1.5" PointX="13.75" PointY="6.25" IsExpanded="true" />
+        <AssociationConnector Association="ibebizModel.fk_Accounts_Groups" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_Products_Brands" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_Categories_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_CategoryLs_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_News_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_Products_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_CategoryProperties_CategoryLs" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_CategoryProperties_Properties" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_Comments_Comments" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_FCategories_FCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_FCategoryLs_FCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_Permissions_Groups" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_NewsLs_News" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_OrderDetails_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_OrderDetails_ProductDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_OrderDetails_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_Permissions_Tables" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_Pictures_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_PriceCharts_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_ProductDetails_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_ProductDetails_Sizes" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_ProductLs_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_ProductProperties_ProductLs" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_ProductProperties_Properties" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_PropertyDetails_Properties" ManuallyRouted="false" />
+        <AssociationConnector Association="ibebizModel.fk_SliderLs_Sliders" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

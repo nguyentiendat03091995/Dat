@@ -1,0 +1,97 @@
+﻿@model tiendat.Models.Product
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Themsp</title>
+</head>
+<body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    
+    
+    @using (Html.BeginForm("Themsp", "QLSanPham", null, FormMethod.Post, new { enctype = "multipart/form-data", id = "formCreate" })) 
+    {
+        @Html.AntiForgeryToken()
+        
+        <div class="form-horizontal">
+            <h4>Property</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+            @ViewBag.Thongbao4
+            <div class="form-group">
+                Tên sản phẩm
+                <div class="col-md-10">
+                    <input type="text" placeholder="Tên sản phẩm..." name="Name"/>
+                    @ViewBag.Thongbao5
+                </div>
+            </div>
+            <div class="form-group">
+                Giá
+                <div class="col-md-10">
+                    <input type="text" placeholder="Giá bán" name="Price" />
+                    @Html.ValidationMessageFor(model => model.Price)
+                    @*<input type="button" onclick=""/>*@
+                </div>
+            </div>
+            <div class="form-group">
+                Giá khuyến mãi
+                <div class="col-md-10">
+                    <input type="text" placeholder="Giá khuyến mãi" name="PriceSell" />
+                    @Html.ValidationMessageFor(model => model.PriceSell)
+
+                    @*<input type="button" onclick=""/>*@
+                </div>
+            </div>
+            <div class="form-group">
+                Từ ngày
+                <div class="col-md-10">
+                    <input type="date" name="DateFrom" />
+                    @Html.ValidationMessageFor(model => model.DateFrom)
+                    @ViewBag.Thongbao2
+                    @*<input type="button" onclick=""/>*@
+                </div>
+            </div>
+            <div class="form-group">
+                Đến ngày
+                <div class="col-md-10">
+                    <input type="date" name="DateTo" />
+                    @Html.ValidationMessageFor(model => model.DateTo)
+                    @ViewBag.Thongbao3
+                    @*<input type="button" onclick=""/>*@
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.BrandID, "Danh mục", new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("danhmuc")
+                </div>
+            </div>
+
+            <div class="form-group">
+                Ảnh(550 x 340)
+                <div class="col-md-10">
+                    <input type="file" name="upfile"/>
+                    @ViewBag.Thongbao1
+                    @*<input type="button" onclick=""/>*@
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+    
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>
